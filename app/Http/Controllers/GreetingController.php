@@ -11,15 +11,15 @@ class GreetingController extends Controller
                 $h1 = '朝のあいさつ';
                 $h2 = 'おはようございます';
                 break;
-            case 'morning':
+            case 'afternoon':
                 $h1 = '昼のあいさつ';
                 $h2 = 'こんにちは';
                 break;
-            case 'morning':
+            case 'evening':
                 $h1 = '夕方のあいさつ';
                 $h2 = 'こんばんは';
                 break;
-            case 'morning':
+            case 'night':
                 $h1 = '夜のあいさつ';
                 $h2 = 'おやすみ';
                 break;
@@ -33,7 +33,7 @@ class GreetingController extends Controller
         $h2 = $str;
         return view('greeting.freeword', ['h1' => $h1, 'h2' => $h2]);
     }
-    
+
     public function random()
     {
         $msg_arr = [
